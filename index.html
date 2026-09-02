@@ -118,6 +118,15 @@
     padding-left:8px;
     margin-left:2px;
   }
+  .brand-link{
+    display:flex;
+    align-items:center;
+  }
+  .brand-logo{
+    height:46px;
+    width:auto;
+    display:block;
+  }
   .nav-links{
     display:none;
     gap:28px;
@@ -566,14 +575,13 @@
   }
 </style>
 </head>
-<body>
+<body id="top">
 
 <div class="topbar">
   <div class="topbar-inner">
-    <div class="brand">
-      <span class="b1">EMBA</span><span class="b2">TOWING</span>
-      <span class="b3">&amp; Recovery</span>
-    </div>
+    <a class="brand-link" href="#top" aria-label="Emba Towing &amp; Recovery home">
+      <img class="brand-logo" src="images/logo.jpg" alt="Emba Towing &amp; Recovery logo">
+    </a>
     <nav class="nav-links">
       <a href="#services">Services</a>
       <a href="#gallery">Gallery</a>
@@ -747,6 +755,7 @@
     <div class="footer-bottom">
       <span>&copy; 2026 Emba Towing &amp; Recovery (Pty) Ltd. All rights reserved.</span>
       <span>Accident Tow &middot; Mechanical Tow &middot; Tyre Change &middot; Jump Start</span>
+      <span>Created by ZiezGeek</span>
     </div>
   </div>
 </footer>
