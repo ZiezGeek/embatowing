@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emba Towing &amp; Recovery | 24/7 Towing in Embalenhle &amp; Evander</title>
+<meta name="description" content="Emba Towing &amp; Recovery (Pty) Ltd — 24/7 accident towing, mechanical breakdown recovery, tyre changes and jump starts across Embalenhle, Evander and the Gert Sibande district.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0a0a0b;
+    --panel:#151517;
+    --panel-2:#1c1d20;
+    --orange:#f7930f;
+    --orange-deep:#e0470f;
+    --steel:#aeb3ba;
+    --steel-dim:#5c6067;
+    --hazard:#ffcc00;
+    --paper:#f2efe9;
+    --paper-dim:#cfccc4;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    background:var(--ink);
+    color:var(--paper);
+    font-family:'Barlow', sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  img{max-width:100%; display:block;}
+
+  h1,h2,h3, .display{
+    font-family:'Anton', sans-serif;
+    font-weight:400;
+    letter-spacing:0.01em;
+    line-height:1.02;
+    text-transform:uppercase;
+  }
+
+  a{color:inherit; text-decoration:none;}
+
+  .wrap{
+    max-width:1140px;
+    margin:0 auto;
+    padding:0 24px;
+  }
+
+  :focus-visible{
+    outline:3px solid var(--hazard);
+    outline-offset:3px;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;}
+  }
+
+  /* ---------- Hazard stripe divider (brand motif) ---------- */
+  .hazard{
+    height:14px;
+    background:repeating-linear-gradient(
+      -45deg,
+      var(--hazard),
+      var(--hazard) 18px,
+      var(--ink) 18px,
+      var(--ink) 36px
+    );
+  }
+  .hazard.thin{height:8px;}
+
+  /* ---------- Top bar ---------- */
+  .topbar{
+    background:var(--ink);
+    border-bottom:1px solid #232326;
+    position:sticky;
+    top:0;
+    z-index:50;
+  }
+  .topbar-inner{
+    max-width:1140px;
+    margin:0 auto;
+    padding:14px 24px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+  }
+  .brand{
+    display:flex;
+    align-items:baseline;
+    gap:8px;
+    font-family:'Anton', sans-serif;
+    font-size:22px;
+    letter-spacing:0.02em;
+  }
+  .brand .b1{color:var(--paper);}
+  .brand .b2{
+    background:linear-gradient(180deg, var(--orange) 0%, var(--orange-deep) 100%);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+  .brand .b3{
+    font-family:'Barlow Condensed', sans-serif;
+    font-size:11px;
+    letter-spacing:0.18em;
+    color:var(--steel);
+    text-transform:uppercase;
+    align-self:center;
+    border-left:1px solid var(--steel-dim);
+    padding-left:8px;
+    margin-left:2px;
+  }
+  .nav-links{
+    display:none;
+    gap:28px;
+    font-family:'Barlow Condensed', sans-serif;
+    font-size:16px;
+    font-weight:600;
+    letter-spacing:0.02em;
+    text-transform:uppercase;
+  }
+  .nav-links a{
+    color:var(--steel);
+    transition:color .15s ease;
+  }
+  .nav-links a:hover{color:var(--orange);}
+  .topbar-call{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    background:var(--orange);
+    color:var(--ink);
+    font-family:'Barlow Condensed', sans-serif;
+    font-weight:700;
+    font-size:15px;
+    padding:9px 14px;
+    clip-path:polygon(10px 0, 100% 0, 100% 100%, 0 100%);
+    white-space:nowrap;
+  }
+  .topbar-call svg{width:16px; height:16px; flex-shrink:0;}
+
+  @media (min-width:820px){
+    .nav-links{display:flex;}
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    min-height:92vh;
+    display:flex;
+    align-items:flex-end;
+    background:#000;
+  }
+  .hero-img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center 60%;
+  }
+  .hero-scrim{
+    position:absolute;
+    inset:0;
+    background:
+      linear-gradient(180deg, rgba(6,6,7,0.55) 0%, rgba(6,6,7,0.35) 30%, rgba(6,6,7,0.88) 78%, #0a0a0b 100%);
+  }
+  .hero-content{
+    position:relative;
+    width:100%;
+    padding:0 24px 56px;
+    max-width:1140px;
+    margin:0 auto;
+  }
+  .hero-eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:var(--panel);
+    border:1px solid var(--steel-dim);
+    padding:6px 12px 6px 10px;
+    font-family:'Barlow Condensed', sans-serif;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:0.03em;
+    color:var(--paper);
+    margin-bottom:20px;
+  }
+  .hero-eyebrow .dot{
+    width:8px; height:8px; border-radius:50%;
+    background:#3ddc61;
+    box-shadow:0 0 0 3px rgba(61,220,97,0.18);
+  }
+  .hero h1{
+    font-size:clamp(40px, 9vw, 84px);
+    color:var(--paper);
+    max-width:11ch;
+  }
+  .hero h1 .accent{
+    background:linear-gradient(90deg, var(--orange) 0%, var(--orange-deep) 100%);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+  .hero-sub{
+    margin-top:18px;
+    font-size:18px;
+    color:var(--paper-dim);
+    max-width:46ch;
+    font-weight:400;
+  }
+  .hero-actions{
+    margin-top:32px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+    align-items:center;
+  }
+  .btn-primary{
+    background:linear-gradient(180deg, var(--orange) 0%, var(--orange-deep) 100%);
+    color:#140700;
+    font-family:'Anton', sans-serif;
+    font-size:20px;
+    letter-spacing:0.01em;
+    padding:16px 26px;
+    clip-path:polygon(14px 0, 100% 0, calc(100% - 14px) 100%, 0 100%);
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    box-shadow:0 8px 24px rgba(224,71,15,0.35);
+  }
+  .btn-primary svg{width:20px; height:20px;}
+  .btn-secondary{
+    border:1px solid var(--steel-dim);
+    color:var(--paper);
+    font-family:'Barlow Condensed', sans-serif;
+    font-weight:600;
+    font-size:16px;
+    padding:15px 22px;
+    letter-spacing:0.02em;
+  }
+  .hero-meta{
+    margin-top:34px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:28px;
+    font-family:'Barlow Condensed', sans-serif;
+    font-size:15px;
+    color:var(--steel);
+  }
+  .hero-meta strong{
+    color:var(--paper);
+    font-weight:600;
+  }
+
+  /* ---------- Section shell ---------- */
+  section{
+    padding:76px 0;
+  }
+  .section-head{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin-bottom:44px;
+    max-width:60ch;
+  }
+  .kicker{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    font-family:'Barlow Condensed', sans-serif;
+    font-size:14px;
+    font-weight:600;
+    color:var(--orange);
+    letter-spacing:0.02em;
+  }
+  .kicker .chain{
+    display:inline-flex;
+    gap:3px;
+  }
+  .kicker .chain span{
+    width:7px; height:7px;
+    border:2px solid var(--orange);
+    border-radius:50%;
+  }
+  .section-head h2{
+    font-size:clamp(28px, 4.4vw, 42px);
+    color:var(--paper);
+  }
+  .section-head p{
+    color:var(--paper-dim);
+    font-size:16.5px;
+  }
+
+  /* ---------- Services ---------- */
+  .services{
+    background:var(--panel);
+  }
+  .service-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+  @media (min-width:700px){
+    .service-grid{grid-template-columns:repeat(2, 1fr);}
+  }
+  @media (min-width:1000px){
+    .service-grid{grid-template-columns:repeat(4, 1fr);}
+  }
+  .service-card{
+    background:var(--panel-2);
+    border:1px solid #29292d;
+    clip-path:polygon(0 0, 100% 0, 100% calc(100% - 22px), calc(100% - 22px) 100%, 0 100%);
+    padding:28px 22px 34px;
+    position:relative;
+    transition:transform .18s ease, border-color .18s ease;
+  }
+  .service-card:hover{
+    transform:translateY(-4px);
+    border-color:var(--orange-deep);
+  }
+  .service-icon{
+    width:46px; height:46px;
+    margin-bottom:20px;
+    color:var(--orange);
+  }
+  .service-icon svg{width:100%; height:100%;}
+  .service-card h3{
+    font-family:'Barlow Condensed', sans-serif;
+    font-weight:700;
+    font-size:21px;
+    text-transform:uppercase;
+    letter-spacing:0.02em;
+    color:var(--paper);
+    margin-bottom:10px;
+  }
+  .service-card p{
+    color:var(--paper-dim);
+    font-size:15px;
+  }
+
+  /* ---------- Gallery ---------- */
+  .gallery-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:14px;
+  }
+  @media (min-width:700px){
+    .gallery-grid{
+      grid-template-columns:repeat(6, 1fr);
+      grid-auto-rows:180px;
+    }
+    .g1{grid-column:span 4; grid-row:span 2;}
+    .g2{grid-column:span 2; grid-row:span 1;}
+    .g3{grid-column:span 2; grid-row:span 1;}
+    .g4{grid-column:span 3; grid-row:span 1;}
+    .g5{grid-column:span 3; grid-row:span 1;}
+  }
+  .gitem{
+    position:relative;
+    overflow:hidden;
+    background:var(--panel-2);
+  }
+  .gitem img{
+    width:100%; height:100%;
+    object-fit:cover;
+    transition:transform .4s ease;
+  }
+  .gitem:hover img{transform:scale(1.06);}
+  .gitem .cap{
+    position:absolute;
+    left:0; right:0; bottom:0;
+    padding:14px 16px;
+    background:linear-gradient(0deg, rgba(0,0,0,0.75), transparent);
+    font-family:'Barlow Condensed', sans-serif;
+    font-weight:600;
+    font-size:14px;
+    letter-spacing:0.02em;
+    color:var(--paper);
+  }
+
+  /* ---------- About / service area ---------- */
+  .about{
+    background:var(--panel);
+  }
+  .about-inner{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:40px;
+    align-items:center;
+  }
+  @media (min-width:860px){
+    .about-inner{grid-template-columns:1.1fr 0.9fr;}
+  }
+  .about-copy h2{
+    font-size:clamp(28px, 4.4vw, 40px);
+    color:var(--paper);
+    margin-bottom:18px;
+  }
+  .about-copy p{
+    color:var(--paper-dim);
+    font-size:16.5px;
+    margin-bottom:16px;
+    max-width:52ch;
+  }
+  .fact-list{
+    margin-top:28px;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+  }
+  .fact{
+    display:flex;
+    gap:16px;
+    align-items:flex-start;
+    border-top:1px solid #2a2a2e;
+    padding-top:16px;
+  }
+  .fact-icon{
+    width:26px; height:26px;
+    color:var(--orange);
+    flex-shrink:0;
+    margin-top:2px;
+  }
+  .fact-icon svg{width:100%; height:100%;}
+  .fact strong{
+    display:block;
+    font-family:'Barlow Condensed', sans-serif;
+    font-weight:700;
+    font-size:16px;
+    color:var(--paper);
+    text-transform:uppercase;
+    letter-spacing:0.02em;
+    margin-bottom:3px;
+  }
+  .fact span{
+    color:var(--paper-dim);
+    font-size:15px;
+  }
+  .about-photo{
+    position:relative;
+  }
+  .about-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    aspect-ratio:4/5;
+  }
+  .about-photo .tag{
+    position:absolute;
+    top:18px; left:-1px;
+    background:var(--orange);
+    color:var(--ink);
+    font-family:'Anton', sans-serif;
+    font-size:14px;
+    padding:8px 16px;
+    clip-path:polygon(0 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
+  }
+
+  /* ---------- CTA band ---------- */
+  .cta-band{
+    background:linear-gradient(120deg, var(--orange-deep) 0%, var(--orange) 100%);
+    color:var(--ink);
+    padding:56px 0;
+  }
+  .cta-inner{
+    display:flex;
+    flex-direction:column;
+    gap:24px;
+    align-items:flex-start;
+  }
+  @media (min-width:760px){
+    .cta-inner{
+      flex-direction:row;
+      align-items:center;
+      justify-content:space-between;
+    }
+  }
+  .cta-inner h2{
+    font-size:clamp(26px, 4.4vw, 38px);
+    max-width:14ch;
+  }
+  .cta-phone{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .cta-phone a{
+    font-family:'Anton', sans-serif;
+    font-size:clamp(34px, 6vw, 52px);
+    color:#140700;
+    display:inline-flex;
+    align-items:center;
+    gap:14px;
+    letter-spacing:0.01em;
+  }
+  .cta-phone a svg{width:34px; height:34px; flex-shrink:0;}
+  .cta-phone small{
+    font-family:'Barlow Condensed', sans-serif;
+    font-weight:600;
+    font-size:14px;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    color:#3a1c04;
+  }
+
+  /* ---------- Footer ---------- */
+  footer{
+    background:var(--ink);
+    padding:52px 0 28px;
+  }
+  .footer-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:36px;
+    padding-bottom:32px;
+    border-bottom:1px solid #202023;
+  }
+  @media (min-width:760px){
+    .footer-grid{grid-template-columns:1.3fr 1fr 1fr;}
+  }
+  .footer-brand .brand{margin-bottom:14px;}
+  .footer-brand p{
+    color:var(--steel);
+    font-size:15px;
+    max-width:38ch;
+  }
+  .footer-col h4{
+    font-family:'Barlow Condensed', sans-serif;
+    font-weight:700;
+    font-size:15px;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    color:var(--paper);
+    margin-bottom:14px;
+  }
+  .footer-col ul{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .footer-col a, .footer-col li{
+    color:var(--steel);
+    font-size:15px;
+  }
+  .footer-col a:hover{color:var(--orange);}
+  .footer-bottom{
+    padding-top:22px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    font-size:13px;
+    color:var(--steel-dim);
+  }
+  @media (min-width:760px){
+    .footer-bottom{flex-direction:row; justify-content:space-between;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="b1">EMBA</span><span class="b2">TOWING</span>
+      <span class="b3">&amp; Recovery</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="topbar-call" href="tel:0826702103">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      082 670 2103
+    </a>
+  </div>
+</div>
+<div class="hazard thin"></div>
+
+<header class="hero">
+  <img class="hero-img" src="images/314987.webp" alt="Emba Towing flatbed truck carrying a car down an open Mpumalanga highway at sunrise">
+  <div class="hero-scrim"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow"><span class="dot"></span> On call right now &mdash; Embalenhle &amp; Evander</div>
+    <h1>Stuck on the road<br>doesn't mean<br><span class="accent">stuck on your day.</span></h1>
+    <p class="hero-sub">Accident recovery, breakdown towing, tyre changes and jump starts, day or night, anywhere across the Gert Sibande district.</p>
+    <div class="hero-actions">
+      <a class="btn-primary" href="tel:0826702103">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call 082 670 2103
+      </a>
+      <a class="btn-secondary" href="#services">See what we tow</a>
+    </div>
+    <div class="hero-meta">
+      <span><strong>Open 24 hours</strong> every day</span>
+      <span>Joe Mkhwanazi Cres, <strong>Embalenhle, 2285</strong></span>
+    </div>
+  </div>
+</header>
+
+<div class="hazard"></div>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker"><span class="chain"><span></span><span></span></span>What we do</span>
+      <h2>Four calls that fix a bad day</h2>
+      <p>Whatever put you on the shoulder of the road, one of our trucks is already trained to deal with it.</p>
+    </div>
+    <div class="service-grid">
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 17h2m0 0a2 2 0 1 0 4 0m-4 0h9m0 0a2 2 0 1 0 4 0m-4 0h2a1 1 0 0 0 1-1v-4l-2.5-4H14v6M5 17V9a1 1 0 0 1 1-1h6v9"/></svg></div>
+        <h3>Accident Tow</h3>
+        <p>Careful, fast recovery from collision scenes &mdash; we clear the road and get the vehicle somewhere safe.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <h3>Mechanical Tow</h3>
+        <p>Engine trouble or a breakdown that won't start &mdash; we load it up and run it to the workshop of your choice.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.4"/><path d="M12 4v2.4M12 17.6V20M4 12h2.4M17.6 12H20M6.3 6.3l1.7 1.7M16 16l1.7 1.7M6.3 17.7l1.7-1.7M16 8l1.7-1.7"/></svg></div>
+        <h3>Tyre Change</h3>
+        <p>A flat on the highway shouldn't cost you the afternoon. We swap it roadside and get you rolling.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg></div>
+        <h3>Jump Start</h3>
+        <p>Flat battery, dead simple fix. One call and we're on our way to get the engine turning again.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker"><span class="chain"><span></span><span></span></span>Out in the field</span>
+      <h2>Real recoveries, real roads</h2>
+      <p>No stock photography &mdash; every image here is one of our own trucks on an actual job.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gitem g1">
+        <img src="images/314989.webp" alt="Emba Towing bakkie at the scene of a night-time accident recovery on the highway">
+        <div class="cap">Night accident recovery &mdash; on scene within the hour</div>
+      </div>
+      <div class="gitem g2">
+        <img src="images/314988.webp" alt="Emba Towing vehicle towing a crashed minibus taxi at a filling station at night">
+        <div class="cap">Minibus recovery, Evander forecourt</div>
+      </div>
+      <div class="gitem g3">
+        <img src="images/314985.webp" alt="White hatchback loaded onto an Emba Towing flatbed truck after a collision">
+        <div class="cap">Flatbed load-out, Embalenhle</div>
+      </div>
+      <div class="gitem g4">
+        <img src="images/314986.webp" alt="Emba Towing and Recovery promotional flyer showing trucks on the road">
+        <div class="cap">Don't let car trouble spoil your weekend</div>
+      </div>
+      <div class="gitem g5">
+        <img src="images/314987.webp" alt="Silver Mercedes-Benz on an Emba Towing flatbed truck on an open Mpumalanga road at sunrise">
+        <div class="cap">Early morning run, Gert Sibande district</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hazard thin"></div>
+
+<section class="about" id="about">
+  <div class="wrap about-inner">
+    <div class="about-copy">
+      <span class="kicker"><span class="chain"><span></span><span></span></span>Based local, ready fast</span>
+      <h2>Rooted in Embalenhle. Running across Mpumalanga.</h2>
+      <p>Emba Towing &amp; Recovery (Pty) Ltd is a family-run recovery operation based on Joe Mkhwanazi Crescent, Embalenhle. Our fleet of flatbeds and recovery bakkies works around the clock, so a breakdown at 2pm and a collision at 2am get the same response.</p>
+      <p>We know these roads &mdash; the N17, the routes into Evander and Secunda, and everything in between &mdash; which means less time waiting on the shoulder and more time getting home.</p>
+      <div class="fact-list">
+        <div class="fact">
+          <div class="fact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+          <div><strong>Open 24 hours</strong><span>Every day of the year, including public holidays.</span></div>
+        </div>
+        <div class="fact">
+          <div class="fact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><strong>Joe Mkhwanazi Cres, Embalenhle, 2285</strong><span>Serving Evander and the surrounding Gert Sibande district.</span></div>
+        </div>
+        <div class="fact">
+          <div class="fact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div><strong>082 670 2103</strong><span>Save it now &mdash; you'll want it the day you need it.</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="about-photo">
+      <span class="tag">On scene</span>
+      <img src="images/314984.jpg" alt="Emba Towing flatbed loading a damaged car onto the deck at the roadside" onerror="this.style.display='none'">
+    </div>
+  </div>
+</section>
+
+<section class="cta-band" id="contact">
+  <div class="wrap cta-inner">
+    <h2>Don't let car trouble spoil your day.</h2>
+    <div class="cta-phone">
+      <small>24/7 emergency towing &amp; roadside assistance</small>
+      <a href="tel:0826702103">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        082 670 2103
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand"><span class="b1">EMBA</span><span class="b2">TOWING</span></div>
+        <p>24/7 accident and breakdown towing, tyre changes and jump starts across Embalenhle, Evander and the wider Gert Sibande district.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#about">About us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="tel:0826702103">082 670 2103</a></li>
+          <li>Joe Mkhwanazi Cres, Embalenhle, 2285</li>
+          <li>Open 24 hours, every day</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Emba Towing &amp; Recovery (Pty) Ltd. All rights reserved.</span>
+      <span>Accident Tow &middot; Mechanical Tow &middot; Tyre Change &middot; Jump Start</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
